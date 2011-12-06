@@ -208,7 +208,7 @@
     NSString *indexPath = [frameworkBundle pathForResource:@"MapKit" ofType:@"html"];
     webView = [[WebView alloc] initWithFrame:NSZeroRect frameName:nil groupName:nil];
     [[webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:indexPath]]]; 
-    [webView autorelease];
+    //[webView autorelease];
     [[webView windowScriptObject] setValue:self forKey:@"MKGeocoder"];
     [webView setFrameLoadDelegate:self];
 }
